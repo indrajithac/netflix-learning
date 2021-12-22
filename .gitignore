@@ -25,3 +25,4 @@ yarn-error.log*
 #const
 /src/constants
 /src/axios.js
+/src/urls.js

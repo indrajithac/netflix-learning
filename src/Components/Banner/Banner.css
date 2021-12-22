@@ -4,6 +4,11 @@
     height: 448px;
     color: white;    
 }
+.overlay{
+    height: 448px;
+    background: rgb(0,0,0);
+background: linear-gradient(4deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
+}
 .content{
     padding-top: 140px;
     height: 190px;
@@ -41,8 +46,4 @@
     max-width: 80%;
     overflow: hidden;
     
-}
-.fade_bottom{
-    height: 7.8rem;
-    background-image: linear-gradient(180deg,transparent,rgba(37,37,37,0.61),#111);
 }

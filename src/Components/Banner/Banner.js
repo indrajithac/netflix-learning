@@ -18,17 +18,18 @@ function Banner() {
 
     return (
 
-        <div style={{ backgroundImage:  `url(${movie ? imageUrl+movie.backdrop_path : ''})` }} className='banner'>
+        <div style={{ backgroundImage: `url(${movie ? imageUrl + movie.backdrop_path : ''})` }} className='banner'>
+            <div className="overlay">
+                <div className='content'>
+                    <h1 className="title">{movie ? movie.title ? movie.title : movie.name : ''}</h1>               
+                     <div className='banner_buttons'>
+                        <button className='button'>Play</button>
+                        <button className='button'>My List</button>
+                    </div>
+                    <h1 className='description'>{movie ? movie.overview : ""}</h1>
 
-            <div className='content'>
-                <h1 className="title">{movie ? movie.title ? movie.title : movie.name : ''}</h1>                <div className='banner_buttons'>
-                    <button className='button'>Play</button>
-                    <button className='button'>My List</button>
                 </div>
-                <h1 className='description'>{movie ? movie.overview : ""}</h1>
-
             </div>
-            <div className="fade_bottom"></div>
         </div>
     )
 }
