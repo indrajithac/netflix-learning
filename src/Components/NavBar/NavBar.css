@@ -5,7 +5,8 @@
     height: 40px;
     display: flex;
     justify-content:space-between ;
-    background-color: rgba(0,0,0,.75);    padding-top: 1rem;
+    background-color: rgba(0,0,0,.75);
+        padding-top: 1rem;
 }
 .logo{
     position: fixed;
@@ -13,8 +14,21 @@
     width: 80px;
 }
 
-.avatar{
+.navbar .avatar{
     position: fixed;
     right: 20px;
     width:30px ;
+    display: flex;
+    justify-content:end;
+    cursor: pointer;    
+}
+
+.avatar img{
+    width: 30px;
+
+}
+
+.avatar span{
+    color: white;
+    margin-right: 5px;
 }
