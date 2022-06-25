@@ -20,7 +20,7 @@ function Login() {
                 //const user = userCredential.user;
                 // ...
             }).then(() => { alert("Logged In") }).then(() => {
-                navigate('/');
+                navigate('/netflix-learning/');
             })
             .catch((error) => {
                 const errorCode = error.code;
@@ -36,7 +36,6 @@ function Login() {
                 <form onSubmit={handleLogin}>
 
 
-                    <label htmlFor="fname"></label>
                     <br />
                     <input
                         className="input"
@@ -45,12 +44,10 @@ function Login() {
                         onChange={(e) => setEmail(e.target.value)}
                         id="fname"
                         name="email"
-                        defaultValue="John"
                         placeholder='Email'
                     />
                     <br />
 
-                    <label htmlFor="lname"></label>
                     <br />
                     <input
                         className="input"
@@ -58,15 +55,14 @@ function Login() {
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         id="lname"
-                        name="password"
-                        defaultValue="Doe"
+                        name="password"                
                         placeholder='Password'
                     />
                     <br />
                     <br />
                     <button>Login</button>
                 </form>
-                <a href='/netflix-learning/login'>Sign up</a>
+                <a href='/netflix-learning/signup'>Sign up</a>
             </div>
         </div>
     )

@@ -22,7 +22,7 @@ function Signup() {
                     const docRef = await addDoc(collection(firestore, "users"), {
                         id: userCredential.user.uid,
                         username: username,
-                        email,
+                        email:email,
                     });
                     console.log("Document written with ID: ", docRef.id);
                     updateProfile(auth.currentUser, {
@@ -35,7 +35,7 @@ function Signup() {
                 console.log(userCredential);
 
             }).then(() => {
-                navigate('/login');
+                navigate('/netflix-learning/login');
             })
     }
 
@@ -44,43 +44,34 @@ function Signup() {
             <div className="signupParentDiv">
                 <h2>Sign up</h2>
                 <form onSubmit={handleSubmit}>
-                    <label htmlFor="fname"></label>
                     <br />
                     <input
                         className="input"
                         type="text"
                         value={username}
                         onChange={(e) => setUsername(e.target.value)}
-                        id="fname"
                         name="name"
-                        defaultValue="John"
                         placeholder='Username'
                     />
                     <br />
-                    <label htmlFor="fname"></label>
                     <br />
                     <input
                         className="input"
                         type="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        id="fname"
                         name="email"
-                        defaultValue="John"
                         placeholder='Email'
                     />
                     <br />
                     
-                    <label htmlFor="lname"></label>
                     <br />
                     <input
                         className="input"
                         type="password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
-                        id="lname"
                         name="password"
-                        defaultValue="Doe"
                         placeholder='Password'
                     />
                     <br />

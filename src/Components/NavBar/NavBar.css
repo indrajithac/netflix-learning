@@ -5,8 +5,7 @@
     height: 40px;
     display: flex;
     justify-content:space-between ;
-    background-color: #111;
-    padding-top: 1rem;
+    background-color: rgba(0,0,0,.75);    padding-top: 1rem;
 }
 .logo{
     position: fixed;
