@@ -9,11 +9,11 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <NavBar />        
+        <NavBar />
         <Routes>
-          <Route path='/netflix-learning' element={<Home/>}/>
-            <Route path='/netflix-learning/login' element={<Login/>}/>
-            <Route path='/netflix-learning/signup' element={<Signup/>}/>
+          <Route path='/netflix-learning' element={<Home />} />
+          <Route path='/netflix-learning/login' element={<Login />} />
+          <Route path='/netflix-learning/signup' element={<Signup />} />
 
         </Routes>
       </Router>
