@@ -6,7 +6,7 @@ import YouTube from 'react-youtube'
 
 function RowPost(props) {
     const [movies, setMovies] = useState([])
-    const [urlId,setUrlId]=useState('')
+    const [urlId, setUrlId] = useState('')
 
     useEffect(() => {
         axios.get(props.url).then((response) => {
@@ -25,12 +25,12 @@ function RowPost(props) {
             autoplay: 1,
         }
     }
-    const handleMovie=(id)=>{
+    const handleMovie = (id) => {
         console.log(id);
-        axios.get(`movie/${id}/videos?api_key=${API_KEY}&language=en-US`).then(response=>{
-            if(response.data.results.length!==0){
+        axios.get(`movie/${id}/videos?api_key=${API_KEY}&language=en-US`).then(response => {
+            if (response.data.results.length !== 0) {
                 setUrlId(response.data.results.sort(function (a, b) { return 0.5 - Math.random() })[0])
-            }else{
+            } else {
                 console.log('empty trailer');
             }
         })
@@ -43,11 +43,11 @@ function RowPost(props) {
             <div className="posters">
                 {movies.map((obj, index) =>
 
-                    <img onClick={()=>handleMovie(obj.id)} key={index} className={props.small ? 'smallPoster' : 'poster'} src={`${imageUrl + obj.poster_path}`} alt="poster" />
+                    <img onClick={() => handleMovie(obj.id)} key={index} className={props.small ? 'smallPoster' : 'poster'} src={`${imageUrl + obj.poster_path}`} alt="poster" />
                 )}
 
             </div>
-           { urlId && <YouTube videoId={urlId.key} opts={opts}  />}
+            {urlId && <YouTube videoId={urlId.key} opts={opts} />}
 
         </div>
     )
