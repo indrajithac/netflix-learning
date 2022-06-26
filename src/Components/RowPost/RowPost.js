@@ -9,13 +9,19 @@ function RowPost(props) {
     const [urlId, setUrlId] = useState('')
 
     useEffect(() => {
-        axios.get(props.url).then((response) => {
-            //console.log(response.data.results[0]);
-            setMovies(response.data.results)
-        }).catch(err => {
-            //alert('error')
-        })
-    }, [])
+        if (props.url) {
+            axios.get(props.url).then((response) => {
+                //console.log(response.data.results[0]);
+                setMovies(response.data.results)
+            }).catch(err => {
+                //alert('error')
+            })
+        }
+        else{
+            setMovies(props.myList)
+        }
+
+    }, [props.myList, props.url])
 
     const opts = {
         height: '390',
