@@ -52,7 +52,7 @@ function App() {
           <Route path='/netflix-learning' element={<Home currentUser={currentUser}/>} />
           <Route path='/netflix-learning/login' element={<Login />} />
           <Route path='/netflix-learning/signup' element={<Signup />} />
-          <Route path='/netflix-learning/movie' element={<Post/>}/>
+          <Route path='/netflix-learning/movie' element={<Post currentUser={currentUser}/>}/>
 
         </Routes>
       </Router>

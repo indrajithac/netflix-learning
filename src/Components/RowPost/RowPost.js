@@ -44,7 +44,6 @@ function RowPost(props) {
     //     })
 
     // }
-   
 
     return (
         <div className='row'>
@@ -52,7 +51,7 @@ function RowPost(props) {
             <div className="posters">
                 {movies.map((obj, index) =>
                         <Link to={"/netflix-learning/movie"}  state={{ movie: obj }}>
-                        <img key={index} className={props.small ? 'smallPoster' : 'poster'} src={`${imageUrl + obj.poster_path}`} alt="poster" />
+                        <img key={index}  className={props.small ? 'smallPoster' : 'poster'} src={`${imageUrl + obj.poster_path}`} alt="poster" />
                         </Link>
                 )}
 
