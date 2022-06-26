@@ -11,7 +11,7 @@ function NavBar() {
     const handleLogout = ()=>{
         const auth = getAuth();
             signOut(auth).then(() => {
-              navigate('/netflix-learning');
+              navigate('/netflix-learning/login');
               // Sign-out successful.
             }).catch((error) => {
               // An error happened.
