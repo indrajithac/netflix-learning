@@ -9,6 +9,7 @@ import Signup from './Components/Signup/Signup'
 import { AuthContext } from './store/Context';
 import { collection, getDocs, query, where } from 'firebase/firestore';
 import { firestore } from './firebase/config';
+import Post from './Components/Post/Post';
 
 function App() {
   const { user, setUser } = useContext(AuthContext);
@@ -51,6 +52,7 @@ function App() {
           <Route path='/netflix-learning' element={<Home currentUser={currentUser}/>} />
           <Route path='/netflix-learning/login' element={<Login />} />
           <Route path='/netflix-learning/signup' element={<Signup />} />
+          <Route path='/netflix-learning/movie' element={<Post/>}/>
 
         </Routes>
       </Router>

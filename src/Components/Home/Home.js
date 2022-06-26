@@ -15,7 +15,10 @@ function Home(props) {
   const addToMyList = async (movie) => {
     if (user) {
       console.log(movie);
-      const docRef = await addDoc(collection(firestore, 'users', props.currentUser[0].id, 'myList'), { ...movie })
+      const docRef = await addDoc(collection(firestore, 'users', props.currentUser[0].id, 'myList'), { 
+        movieId:movie.id,
+        ...movie 
+      })
       console.log("Document written with ID: ", docRef.id);
     }
     else {
@@ -32,7 +35,7 @@ function Home(props) {
         id: details.id
 
       }));
-      console.log(queryData)
+      //console.log(queryData)
       setMyList(queryData)
     }
     getMyList()
@@ -43,13 +46,13 @@ function Home(props) {
   return (
     <div>
       <Banner addToMyList={addToMyList} />
-      <RowPost url={trending} title='Trending' />
-      <RowPost myList={myList} title='My List' />
-      <RowPost url={originals} title='Netflix Orginals' />
-      <RowPost url={action} title='Action' small />
-      <RowPost url={comedy} title='Comedy' small />
-      <RowPost url={horror} title='Horror' small />
-      <RowPost url={romance} title='Romance' small />
+      <RowPost url={trending} addToMyList={addToMyList} title='Trending' />
+      <RowPost myList={myList} addToMyList={addToMyList} title='My List' />
+      <RowPost url={originals} addToMyList={addToMyList} title='Netflix Orginals' />
+      <RowPost url={action} addToMyList={addToMyList} title='Action' small />
+      <RowPost url={comedy} addToMyList={addToMyList} title='Comedy' small />
+      <RowPost url={horror} addToMyList={addToMyList} title='Horror' small />
+      <RowPost url={romance} addToMyList={addToMyList} title='Romance' small />
     </div>
   )
 }

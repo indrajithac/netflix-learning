@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 import { API_KEY, imageUrl } from '../../constants/constants'
 import axios from '../../axios'
-import './Banner.css'
+import './Banner.css';
 
 
 function Banner(props) {
