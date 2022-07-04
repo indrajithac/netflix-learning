@@ -1,39 +1,55 @@
-.post{
-    
-    background-size: cover;
-    height: auto;
-    color: white;    
+.post {
+    color: white;
+    margin-top: 56px;
 }
-.video{
-    height: 448px;
-    background: rgb(0,0,0);
-    background: linear-gradient(4deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
+
+.video {
+    background-size: cover;   
+
 }
-.post-content{
+
+
+.post-content {
     padding-top: 15px;
-    height: auto;
+    height: 190px;
     padding-left: 15px;
 }
-.post-details{
+
+.post-details {
     display: flex;
     align-items: flex-start;
     padding-top: 15px;
 
 }
-.post-poster{
+
+.post-poster {
     max-height: 300px;
     margin-right: 10px;
 }
-.post-poster img{
+
+.post-poster img {
     background-size: cover;
     height: 300px;
 }
-.post-title{
+
+.post-title {
     font-size: 3rem;
     font-weight: 800;
     padding-bottom: 0.3rem;
 }
-.post-button{
+
+
+
+.post-description {
+    line-height: 1.3;
+    padding-top: 1rem;
+    padding-bottom: 0.3rem;
+    font-size: 1rem;
+    max-width: 80%;
+
+}
+
+.post-button {
     color: white;
     outline: none;
     border: none;
@@ -43,21 +59,12 @@
     padding-right: 2rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    background-color:rgba(51, 51, 51, 0.5);
+    background-color: rgba(51, 51, 51, 0.5);
     cursor: pointer;
     margin-right: 1rem;
 }
-.post-button:hover{
+
+.post-button:hover {
     color: black;
     background-color: #e6e6e6;
-}
-.post-description{
-    width: 54rem;
-    line-height: 1.3;
-    padding-top: 1rem;
-    font-size: 1rem;
-    height: auto;
-    max-width: 80%;
-    
-    
 }

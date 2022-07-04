@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { API_KEY, imageUrl } from '../../constants/constants'
 import axios from '../../axios'
 import './Banner.css';
+import { Link } from 'react-router-dom';
 
 
 function Banner(props) {
@@ -16,7 +17,7 @@ function Banner(props) {
         })
     }, [])
 
-    
+
 
     return (
 
@@ -25,8 +26,10 @@ function Banner(props) {
                 <div className='content'>
                     <h1 className="title">{movie ? movie.title ? movie.title : movie.name : ''}</h1>
                     <div className='banner_buttons'>
-                        <button className='button'>Play</button>
-                        <button className='button' onClick={()=>props.addToMyList(movie)}>My List +</button>
+                        <Link to={"/netflix-learning/movie"} state={{ movie:movie }}>
+                            <button className='button'>Play</button>
+                        </Link>
+                        <button className='button' onClick={() => props.addToMyList(movie)}>My List +</button>
                     </div>
                     <h1 className='description'>{movie ? movie.overview : ""}</h1>
 

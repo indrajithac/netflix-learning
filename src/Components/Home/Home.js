@@ -40,7 +40,7 @@ function Home(props) {
     }
     getMyList()
 
-  })
+  },[props.currentUser])
 
 
   return (
