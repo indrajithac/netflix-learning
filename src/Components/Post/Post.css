@@ -22,6 +22,7 @@
 
 }
 
+
 .post-poster {
     max-height: 300px;
     margin-right: 10px;
@@ -46,7 +47,15 @@
     padding-bottom: 0.3rem;
     font-size: 1rem;
     max-width: 80%;
-
+}
+.post-more-description{
+    display: flex;
+  
+}
+.post-more-description{
+    margin-right: 20px;
+    color:#858383;
+    font-size: 0.9rem;
 }
 
 .post-button {
